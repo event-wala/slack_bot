@@ -1,0 +1,455 @@
+2020-03-16 15:20:30,161 [DEBUG]  Available web server routes: 
+/conversations/<conversation_id>/messages          POST                           add_message
+/conversations/<conversation_id>/tracker/events    POST                           append_events
+/model/test/intents                                POST                           evaluate_intents
+/model/test/stories                                POST                           evaluate_stories
+/conversations/<conversation_id>/execute           POST                           execute_action
+/domain                                            GET                            get_domain
+/                                                  GET                            hello
+/model                                             PUT                            load_model
+/model/parse                                       POST                           parse
+/conversations/<conversation_id>/predict           POST                           predict
+/conversations/<conversation_id>/tracker/events    PUT                            replace_events
+/conversations/<conversation_id>/story             GET                            retrieve_story
+/conversations/<conversation_id>/tracker           GET                            retrieve_tracker
+/webhooks/slack                                    GET                            slack_webhook.health
+/webhooks/slack/webhook                            GET                            slack_webhook.webhook
+/status                                            GET                            status
+/model/predict                                     POST                           tracker_predict
+/model/train                                       POST                           train
+/model                                             DELETE                         unload_model
+/version                                           GET                            version
+2020-03-16 15:20:30,162 [INFO ]  Starting Rasa server on http://localhost:5002
+2020-03-16 15:20:30,163 [DEBUG]  Using the default number of Sanic workers (1).
+2020-03-16 15:20:30,164 [INFO ]  Enabling coroutine debugging. Loop id 1921988891528.
+2020-03-16 15:20:30,196 [DEBUG]  Extracted model to 'C:\Users\athen\AppData\Local\Temp\tmp2a84xxq2'.
+2020-03-16 15:20:31,342 [INFO ]  Note: NumExpr detected 12 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2020-03-16 15:20:31,343 [INFO ]  NumExpr defaulting to 8 threads.
+2020-03-16 15:20:33,936 [INFO ]  Entry Point [tensor2tensor.envs.tic_tac_toe_env:TicTacToeEnv] registered with id [T2TEnv-TicTacToeEnv-v0]
+2020-03-16 15:20:35,477 [DEBUG]  Connected to InMemoryTrackerStore.
+2020-03-16 15:20:35,478 [DEBUG]  Connected to lock store 'InMemoryLockStore'.
+2020-03-16 15:20:35,507 [DEBUG]  Extracted model to 'C:\Users\athen\AppData\Local\Temp\tmp0xnahlb_'.
+2020-03-16 15:20:35,512 [DEBUG]  Using yaml library: c:\users\athen\appdata\local\continuum\anaconda3\lib\site-packages\ruamel\yaml\__init__.py
+2020-03-16 15:22:33,548 [DEBUG]  Creating a new tracker for id 'U010418HBU7'.
+2020-03-16 15:22:33,618 [DEBUG]  Received user message 'hi' with intent '{'name': 'greet', 'confidence': 0.9607546329498291}' and entities '[]'
+2020-03-16 15:22:33,619 [DEBUG]  Logged UserUtterance - tracker now has 2 events
+2020-03-16 15:22:33,621 [DEBUG]  Current tracker state [None, None, None, {}, {'prev_action_listen': 1.0, 'intent_greet': 1.0}]
+2020-03-16 15:22:33,621 [DEBUG]  There is a memorised next action '11'
+2020-03-16 15:22:33,744 [DEBUG]  Predicted next action using policy_0_MemoizationPolicy
+2020-03-16 15:22:33,745 [DEBUG]  Predicted next action 'utter_greet' with confidence 1.00.
+2020-03-16 15:22:33,746 [DEBUG]  Action 'utter_greet' ended with events '['BotUttered(text: Hey! How are you?, data: {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, metadata: {})']'
+2020-03-16 15:22:34,077 [DEBUG]  Current tracker state [None, None, {}, {'prev_action_listen': 1.0, 'intent_greet': 1.0}, {'prev_utter_greet': 1.0, 'intent_greet': 1.0}]
+2020-03-16 15:22:34,077 [DEBUG]  There is a memorised next action '0'
+2020-03-16 15:22:34,080 [DEBUG]  There is no mapped action for the predicted intent, 'greet'.
+2020-03-16 15:22:34,081 [DEBUG]  Predicted next action using policy_0_MemoizationPolicy
+2020-03-16 15:22:34,082 [DEBUG]  Predicted next action 'action_listen' with confidence 1.00.
+2020-03-16 15:22:34,083 [DEBUG]  Action 'action_listen' ended with events '[]'
+2020-03-16 15:22:34,083 [DEBUG]  Deleted lock for conversation 'U010418HBU7'.
+2020-03-16 15:28:00,519 [DEBUG]  Recreating tracker for id 'U010418HBU7'
+2020-03-16 15:28:00,522 [DEBUG]  Received user message 'hello' with intent '{'name': 'greet', 'confidence': 0.9682551026344299}' and entities '[]'
+2020-03-16 15:28:00,523 [DEBUG]  Logged UserUtterance - tracker now has 6 events
+2020-03-16 15:28:00,523 [DEBUG]  Current tracker state [None, {}, {'prev_action_listen': 1.0, 'intent_greet': 1.0}, {'prev_utter_greet': 1.0, 'intent_greet': 1.0}, {'prev_action_listen': 1.0, 'intent_greet': 1.0}]
+2020-03-16 15:28:00,524 [DEBUG]  There is no memorised next action
+2020-03-16 15:28:00,528 [DEBUG]  Predicted next action using policy_1_KerasPolicy
+2020-03-16 15:28:00,529 [DEBUG]  Predicted next action 'utter_happy' with confidence 0.35.
+2020-03-16 15:28:00,530 [DEBUG]  Action 'utter_happy' ended with events '['BotUttered(text: Great, carry on!, data: {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, metadata: {})']'
+2020-03-16 15:28:00,865 [DEBUG]  Current tracker state [{}, {'prev_action_listen': 1.0, 'intent_greet': 1.0}, {'prev_utter_greet': 1.0, 'intent_greet': 1.0}, {'prev_action_listen': 1.0, 'intent_greet': 1.0}, {'prev_utter_happy': 1.0, 'intent_greet': 1.0}]
+2020-03-16 15:28:00,867 [DEBUG]  There is no memorised next action
+2020-03-16 15:28:00,872 [DEBUG]  There is no mapped action for the predicted intent, 'greet'.
+2020-03-16 15:28:00,872 [DEBUG]  Predicted next action using policy_1_KerasPolicy
+2020-03-16 15:28:00,873 [DEBUG]  Predicted next action 'action_listen' with confidence 0.91.
+2020-03-16 15:28:00,874 [DEBUG]  Action 'action_listen' ended with events '[]'
+2020-03-16 15:28:00,875 [DEBUG]  Deleted lock for conversation 'U010418HBU7'.
+2020-03-16 15:28:32,624 [DEBUG]  Creating a new tracker for id 'UV4Q9D70B'.
+2020-03-16 15:28:32,627 [DEBUG]  Received user message 'has joined the channel' with intent '{'name': 'greet', 'confidence': 0.24155886471271515}' and entities '[]'
+2020-03-16 15:28:32,628 [DEBUG]  Logged UserUtterance - tracker now has 2 events
+2020-03-16 15:28:32,628 [DEBUG]  Current tracker state [None, None, None, {}, {'prev_action_listen': 1.0, 'intent_greet': 1.0}]
+2020-03-16 15:28:32,629 [DEBUG]  There is a memorised next action '11'
+2020-03-16 15:28:32,632 [DEBUG]  Predicted next action using policy_0_MemoizationPolicy
+2020-03-16 15:28:32,633 [DEBUG]  Predicted next action 'utter_greet' with confidence 1.00.
+2020-03-16 15:28:32,635 [DEBUG]  Action 'utter_greet' ended with events '['BotUttered(text: Hey! How are you?, data: {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, metadata: {})']'
+2020-03-16 15:28:32,961 [DEBUG]  Current tracker state [None, None, {}, {'prev_action_listen': 1.0, 'intent_greet': 1.0}, {'prev_utter_greet': 1.0, 'intent_greet': 1.0}]
+2020-03-16 15:28:32,962 [DEBUG]  There is a memorised next action '0'
+2020-03-16 15:28:32,966 [DEBUG]  There is no mapped action for the predicted intent, 'greet'.
+2020-03-16 15:28:32,966 [DEBUG]  Predicted next action using policy_0_MemoizationPolicy
+2020-03-16 15:28:32,967 [DEBUG]  Predicted next action 'action_listen' with confidence 1.00.
+2020-03-16 15:28:32,968 [DEBUG]  Action 'action_listen' ended with events '[]'
+2020-03-16 15:28:32,969 [DEBUG]  Deleted lock for conversation 'UV4Q9D70B'.
+2020-03-16 15:28:41,759 [DEBUG]  Recreating tracker for id 'U010418HBU7'
+2020-03-16 15:28:41,762 [DEBUG]  Received user message 'hi' with intent '{'name': 'greet', 'confidence': 0.9607546329498291}' and entities '[]'
+2020-03-16 15:28:41,762 [DEBUG]  Logged UserUtterance - tracker now has 10 events
+2020-03-16 15:28:41,763 [DEBUG]  Current tracker state [{'prev_action_listen': 1.0, 'intent_greet': 1.0}, {'prev_utter_greet': 1.0, 'intent_greet': 1.0}, {'prev_action_listen': 1.0, 'intent_greet': 1.0}, {'prev_utter_happy': 1.0, 'intent_greet': 1.0}, {'prev_action_listen': 1.0, 'intent_greet': 1.0}]
+2020-03-16 15:28:41,764 [DEBUG]  There is no memorised next action
+2020-03-16 15:28:41,768 [DEBUG]  Predicted next action using policy_1_KerasPolicy
+2020-03-16 15:28:41,769 [DEBUG]  Predicted next action 'utter_happy' with confidence 0.39.
+2020-03-16 15:28:41,770 [DEBUG]  Action 'utter_happy' ended with events '['BotUttered(text: Great, carry on!, data: {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, metadata: {})']'
+2020-03-16 15:28:42,119 [DEBUG]  Current tracker state [{'prev_utter_greet': 1.0, 'intent_greet': 1.0}, {'prev_action_listen': 1.0, 'intent_greet': 1.0}, {'prev_utter_happy': 1.0, 'intent_greet': 1.0}, {'prev_action_listen': 1.0, 'intent_greet': 1.0}, {'prev_utter_happy': 1.0, 'intent_greet': 1.0}]
+2020-03-16 15:28:42,120 [DEBUG]  There is no memorised next action
+2020-03-16 15:28:42,124 [DEBUG]  There is no mapped action for the predicted intent, 'greet'.
+2020-03-16 15:28:42,125 [DEBUG]  Predicted next action using policy_1_KerasPolicy
+2020-03-16 15:28:42,125 [DEBUG]  Predicted next action 'action_listen' with confidence 0.93.
+2020-03-16 15:28:42,126 [DEBUG]  Action 'action_listen' ended with events '[]'
+2020-03-16 15:28:42,127 [DEBUG]  Deleted lock for conversation 'U010418HBU7'.
+2020-03-16 15:28:42,132 [DEBUG]  Recreating tracker for id 'U010418HBU7'
+2020-03-16 15:28:42,133 [DEBUG]  Received user message 'hi' with intent '{'name': 'greet', 'confidence': 0.9607546329498291}' and entities '[]'
+2020-03-16 15:28:42,134 [DEBUG]  Logged UserUtterance - tracker now has 14 events
+2020-03-16 15:28:42,135 [DEBUG]  Current tracker state [{'prev_action_listen': 1.0, 'intent_greet': 1.0}, {'prev_utter_happy': 1.0, 'intent_greet': 1.0}, {'prev_action_listen': 1.0, 'intent_greet': 1.0}, {'prev_utter_happy': 1.0, 'intent_greet': 1.0}, {'prev_action_listen': 1.0, 'intent_greet': 1.0}]
+2020-03-16 15:28:42,136 [DEBUG]  There is no memorised next action
+2020-03-16 15:28:42,140 [DEBUG]  Predicted next action using policy_1_KerasPolicy
+2020-03-16 15:28:42,141 [DEBUG]  Predicted next action 'utter_happy' with confidence 0.40.
+2020-03-16 15:28:42,141 [DEBUG]  Action 'utter_happy' ended with events '['BotUttered(text: Great, carry on!, data: {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, metadata: {})']'
+2020-03-16 15:28:42,460 [DEBUG]  Current tracker state [{'prev_utter_happy': 1.0, 'intent_greet': 1.0}, {'prev_action_listen': 1.0, 'intent_greet': 1.0}, {'prev_utter_happy': 1.0, 'intent_greet': 1.0}, {'prev_action_listen': 1.0, 'intent_greet': 1.0}, {'prev_utter_happy': 1.0, 'intent_greet': 1.0}]
+2020-03-16 15:28:42,462 [DEBUG]  There is no memorised next action
+2020-03-16 15:28:42,465 [DEBUG]  There is no mapped action for the predicted intent, 'greet'.
+2020-03-16 15:28:42,466 [DEBUG]  Predicted next action using policy_1_KerasPolicy
+2020-03-16 15:28:42,467 [DEBUG]  Predicted next action 'action_listen' with confidence 0.93.
+2020-03-16 15:28:42,467 [DEBUG]  Action 'action_listen' ended with events '[]'
+2020-03-16 15:28:42,468 [DEBUG]  Deleted lock for conversation 'U010418HBU7'.
+2020-03-16 15:29:35,868 [DEBUG]  Recreating tracker for id 'U010418HBU7'
+2020-03-16 15:29:35,871 [DEBUG]  Received user message 'hi' with intent '{'name': 'greet', 'confidence': 0.9607546329498291}' and entities '[]'
+2020-03-16 15:29:35,872 [DEBUG]  Logged UserUtterance - tracker now has 18 events
+2020-03-16 15:29:35,873 [DEBUG]  Current tracker state [{'prev_action_listen': 1.0, 'intent_greet': 1.0}, {'prev_utter_happy': 1.0, 'intent_greet': 1.0}, {'prev_action_listen': 1.0, 'intent_greet': 1.0}, {'prev_utter_happy': 1.0, 'intent_greet': 1.0}, {'prev_action_listen': 1.0, 'intent_greet': 1.0}]
+2020-03-16 15:29:35,874 [DEBUG]  There is no memorised next action
+2020-03-16 15:29:35,877 [DEBUG]  Predicted next action using policy_1_KerasPolicy
+2020-03-16 15:29:35,879 [DEBUG]  Predicted next action 'utter_happy' with confidence 0.40.
+2020-03-16 15:29:35,879 [DEBUG]  Action 'utter_happy' ended with events '['BotUttered(text: Great, carry on!, data: {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, metadata: {})']'
+2020-03-16 15:29:36,199 [DEBUG]  Current tracker state [{'prev_utter_happy': 1.0, 'intent_greet': 1.0}, {'prev_action_listen': 1.0, 'intent_greet': 1.0}, {'prev_utter_happy': 1.0, 'intent_greet': 1.0}, {'prev_action_listen': 1.0, 'intent_greet': 1.0}, {'prev_utter_happy': 1.0, 'intent_greet': 1.0}]
+2020-03-16 15:29:36,201 [DEBUG]  There is no memorised next action
+2020-03-16 15:29:36,205 [DEBUG]  There is no mapped action for the predicted intent, 'greet'.
+2020-03-16 15:29:36,205 [DEBUG]  Predicted next action using policy_1_KerasPolicy
+2020-03-16 15:29:36,206 [DEBUG]  Predicted next action 'action_listen' with confidence 0.93.
+2020-03-16 15:29:36,207 [DEBUG]  Action 'action_listen' ended with events '[]'
+2020-03-16 15:29:36,210 [DEBUG]  Deleted lock for conversation 'U010418HBU7'.
+2020-03-16 15:29:43,290 [DEBUG]  Recreating tracker for id 'U010418HBU7'
+2020-03-16 15:29:43,293 [DEBUG]  Received user message 'sad' with intent '{'name': 'mood_unhappy', 'confidence': 0.9468721151351929}' and entities '[]'
+2020-03-16 15:29:43,294 [DEBUG]  Logged UserUtterance - tracker now has 22 events
+2020-03-16 15:29:43,295 [DEBUG]  Current tracker state [{'prev_action_listen': 1.0, 'intent_greet': 1.0}, {'prev_utter_happy': 1.0, 'intent_greet': 1.0}, {'prev_action_listen': 1.0, 'intent_greet': 1.0}, {'prev_utter_happy': 1.0, 'intent_greet': 1.0}, {'intent_mood_unhappy': 1.0, 'prev_action_listen': 1.0}]
+2020-03-16 15:29:43,296 [DEBUG]  There is no memorised next action
+2020-03-16 15:29:43,300 [DEBUG]  Predicted next action using policy_1_KerasPolicy
+2020-03-16 15:29:43,300 [DEBUG]  Predicted next action 'utter_cheer_up' with confidence 0.53.
+2020-03-16 15:29:43,300 [DEBUG]  Action 'utter_cheer_up' ended with events '['BotUttered(text: Here is something to cheer you up:, data: {"elements": null, "quick_replies": null, "buttons": null, "attachment": "https://i.imgur.com/nGF1K8f.jpg", "image": "https://i.imgur.com/nGF1K8f.jpg", "custom": null}, metadata: {})']'
+2020-03-16 15:29:43,916 [DEBUG]  Current tracker state [{'prev_utter_happy': 1.0, 'intent_greet': 1.0}, {'prev_action_listen': 1.0, 'intent_greet': 1.0}, {'prev_utter_happy': 1.0, 'intent_greet': 1.0}, {'intent_mood_unhappy': 1.0, 'prev_action_listen': 1.0}, {'prev_utter_cheer_up': 1.0, 'intent_mood_unhappy': 1.0}]
+2020-03-16 15:29:43,917 [DEBUG]  There is no memorised next action
+2020-03-16 15:29:43,921 [DEBUG]  There is no mapped action for the predicted intent, 'mood_unhappy'.
+2020-03-16 15:29:43,922 [DEBUG]  Predicted next action using policy_1_KerasPolicy
+2020-03-16 15:29:43,923 [DEBUG]  Predicted next action 'utter_did_that_help' with confidence 0.75.
+2020-03-16 15:29:43,926 [DEBUG]  Action 'utter_did_that_help' ended with events '['BotUttered(text: Did that help you?, data: {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, metadata: {})']'
+2020-03-16 15:29:44,237 [DEBUG]  Current tracker state [{'prev_action_listen': 1.0, 'intent_greet': 1.0}, {'prev_utter_happy': 1.0, 'intent_greet': 1.0}, {'intent_mood_unhappy': 1.0, 'prev_action_listen': 1.0}, {'prev_utter_cheer_up': 1.0, 'intent_mood_unhappy': 1.0}, {'intent_mood_unhappy': 1.0, 'prev_utter_did_that_help': 1.0}]
+2020-03-16 15:29:44,238 [DEBUG]  There is no memorised next action
+2020-03-16 15:29:44,242 [DEBUG]  There is no mapped action for the predicted intent, 'mood_unhappy'.
+2020-03-16 15:29:44,243 [DEBUG]  Predicted next action using policy_1_KerasPolicy
+2020-03-16 15:29:44,243 [DEBUG]  Predicted next action 'utter_did_that_help' with confidence 0.32.
+2020-03-16 15:29:44,244 [DEBUG]  Action 'utter_did_that_help' ended with events '['BotUttered(text: Did that help you?, data: {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, metadata: {})']'
+2020-03-16 15:29:44,553 [DEBUG]  Current tracker state [{'prev_utter_happy': 1.0, 'intent_greet': 1.0}, {'intent_mood_unhappy': 1.0, 'prev_action_listen': 1.0}, {'prev_utter_cheer_up': 1.0, 'intent_mood_unhappy': 1.0}, {'intent_mood_unhappy': 1.0, 'prev_utter_did_that_help': 1.0}, {'intent_mood_unhappy': 1.0, 'prev_utter_did_that_help': 1.0}]
+2020-03-16 15:29:44,555 [DEBUG]  There is no memorised next action
+2020-03-16 15:29:44,567 [DEBUG]  There is no mapped action for the predicted intent, 'mood_unhappy'.
+2020-03-16 15:29:44,571 [DEBUG]  Predicted next action using policy_1_KerasPolicy
+2020-03-16 15:29:44,573 [DEBUG]  Predicted next action 'utter_goodbye' with confidence 0.43.
+2020-03-16 15:29:44,582 [DEBUG]  Action 'utter_goodbye' ended with events '['BotUttered(text: Bye, data: {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, metadata: {})']'
+2020-03-16 15:29:44,896 [DEBUG]  Current tracker state [{'intent_mood_unhappy': 1.0, 'prev_action_listen': 1.0}, {'prev_utter_cheer_up': 1.0, 'intent_mood_unhappy': 1.0}, {'intent_mood_unhappy': 1.0, 'prev_utter_did_that_help': 1.0}, {'intent_mood_unhappy': 1.0, 'prev_utter_did_that_help': 1.0}, {'prev_utter_goodbye': 1.0, 'intent_mood_unhappy': 1.0}]
+2020-03-16 15:29:44,897 [DEBUG]  There is no memorised next action
+2020-03-16 15:29:44,901 [DEBUG]  There is no mapped action for the predicted intent, 'mood_unhappy'.
+2020-03-16 15:29:44,902 [DEBUG]  Predicted next action using policy_1_KerasPolicy
+2020-03-16 15:29:44,903 [DEBUG]  Predicted next action 'action_listen' with confidence 0.70.
+2020-03-16 15:29:44,904 [DEBUG]  Action 'action_listen' ended with events '[]'
+2020-03-16 15:29:44,905 [DEBUG]  Deleted lock for conversation 'U010418HBU7'.
+2020-03-16 15:33:54,349 [ERROR]  Exception occurred while handling uri: 'http://c6e938a6.ngrok.io/favicon.ico'
+Traceback (most recent call last):
+  File "c:\users\athen\appdata\local\continuum\anaconda3\lib\site-packages\sanic\app.py", line 940, in handle_request
+    handler, args, kwargs, uri, name = self.router.get(request)
+  File "c:\users\athen\appdata\local\continuum\anaconda3\lib\site-packages\sanic\router.py", line 411, in get
+    return self._get(request.path, request.method, "")
+  File "c:\users\athen\appdata\local\continuum\anaconda3\lib\site-packages\sanic\router.py", line 475, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL /favicon.ico not found
+2020-03-16 15:33:54,350 [ERROR]  Exception occurred in one of response middleware handlers
+Traceback (most recent call last):
+  File "c:\users\athen\appdata\local\continuum\anaconda3\lib\site-packages\sanic\app.py", line 1017, in handle_request
+    request, response, request_name=name
+  File "c:\users\athen\appdata\local\continuum\anaconda3\lib\site-packages\spf\framework.py", line 685, in _run_response_middleware_19_12
+    _response = await _response
+  File "c:\users\athen\appdata\local\continuum\anaconda3\lib\site-packages\sanic_cors\extension.py", line 241, in unapplied_cors_response_middleware
+    request_context = context.request[id(req)]
+  File "c:\users\athen\appdata\local\continuum\anaconda3\lib\site-packages\spf\context.py", line 72, in __getitem__
+    raise e1
+  File "c:\users\athen\appdata\local\continuum\anaconda3\lib\site-packages\spf\context.py", line 58, in __getitem__
+    return self._inner().__getitem__(item)
+KeyError: 1919999961032
+2020-03-16 15:33:57,779 [ERROR]  Exception occurred while handling uri: 'http://c6e938a6.ngrok.io/favicon.ico'
+Traceback (most recent call last):
+  File "c:\users\athen\appdata\local\continuum\anaconda3\lib\site-packages\sanic\app.py", line 940, in handle_request
+    handler, args, kwargs, uri, name = self.router.get(request)
+  File "c:\users\athen\appdata\local\continuum\anaconda3\lib\site-packages\sanic\router.py", line 411, in get
+    return self._get(request.path, request.method, "")
+  File "c:\users\athen\appdata\local\continuum\anaconda3\lib\site-packages\sanic\router.py", line 475, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL /favicon.ico not found
+2020-03-16 15:33:57,780 [ERROR]  Exception occurred in one of response middleware handlers
+Traceback (most recent call last):
+  File "c:\users\athen\appdata\local\continuum\anaconda3\lib\site-packages\sanic\app.py", line 1017, in handle_request
+    request, response, request_name=name
+  File "c:\users\athen\appdata\local\continuum\anaconda3\lib\site-packages\spf\framework.py", line 685, in _run_response_middleware_19_12
+    _response = await _response
+  File "c:\users\athen\appdata\local\continuum\anaconda3\lib\site-packages\sanic_cors\extension.py", line 241, in unapplied_cors_response_middleware
+    request_context = context.request[id(req)]
+  File "c:\users\athen\appdata\local\continuum\anaconda3\lib\site-packages\spf\context.py", line 72, in __getitem__
+    raise e1
+  File "c:\users\athen\appdata\local\continuum\anaconda3\lib\site-packages\spf\context.py", line 58, in __getitem__
+    return self._inner().__getitem__(item)
+KeyError: 1919999960792
+2020-03-16 15:34:29,784 [DEBUG]  Recreating tracker for id 'U010418HBU7'
+2020-03-16 15:34:29,787 [DEBUG]  Received user message 'hi' with intent '{'name': 'greet', 'confidence': 0.9607546329498291}' and entities '[]'
+2020-03-16 15:34:29,788 [DEBUG]  Logged UserUtterance - tracker now has 32 events
+2020-03-16 15:34:29,790 [DEBUG]  Current tracker state [{'prev_utter_cheer_up': 1.0, 'intent_mood_unhappy': 1.0}, {'intent_mood_unhappy': 1.0, 'prev_utter_did_that_help': 1.0}, {'intent_mood_unhappy': 1.0, 'prev_utter_did_that_help': 1.0}, {'prev_utter_goodbye': 1.0, 'intent_mood_unhappy': 1.0}, {'prev_action_listen': 1.0, 'intent_greet': 1.0}]
+2020-03-16 15:34:29,791 [DEBUG]  There is no memorised next action
+2020-03-16 15:34:29,795 [DEBUG]  Predicted next action using policy_1_KerasPolicy
+2020-03-16 15:34:29,796 [DEBUG]  Predicted next action 'utter_greet' with confidence 0.52.
+2020-03-16 15:34:29,798 [DEBUG]  Action 'utter_greet' ended with events '['BotUttered(text: Hey! How are you?, data: {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, metadata: {})']'
+2020-03-16 15:34:30,150 [DEBUG]  Current tracker state [{'intent_mood_unhappy': 1.0, 'prev_utter_did_that_help': 1.0}, {'intent_mood_unhappy': 1.0, 'prev_utter_did_that_help': 1.0}, {'prev_utter_goodbye': 1.0, 'intent_mood_unhappy': 1.0}, {'prev_action_listen': 1.0, 'intent_greet': 1.0}, {'prev_utter_greet': 1.0, 'intent_greet': 1.0}]
+2020-03-16 15:34:30,152 [DEBUG]  There is no memorised next action
+2020-03-16 15:34:30,156 [DEBUG]  There is no mapped action for the predicted intent, 'greet'.
+2020-03-16 15:34:30,157 [DEBUG]  Predicted next action using policy_1_KerasPolicy
+2020-03-16 15:34:30,158 [DEBUG]  Predicted next action 'action_listen' with confidence 0.97.
+2020-03-16 15:34:30,159 [DEBUG]  Action 'action_listen' ended with events '[]'
+2020-03-16 15:34:30,160 [DEBUG]  Deleted lock for conversation 'U010418HBU7'.
+2020-03-16 15:34:37,008 [DEBUG]  Recreating tracker for id 'U010418HBU7'
+2020-03-16 15:34:37,011 [DEBUG]  Received user message 'sad' with intent '{'name': 'mood_unhappy', 'confidence': 0.9468721151351929}' and entities '[]'
+2020-03-16 15:34:37,012 [DEBUG]  Logged UserUtterance - tracker now has 36 events
+2020-03-16 15:34:37,013 [DEBUG]  Current tracker state [{'intent_mood_unhappy': 1.0, 'prev_utter_did_that_help': 1.0}, {'prev_utter_goodbye': 1.0, 'intent_mood_unhappy': 1.0}, {'prev_action_listen': 1.0, 'intent_greet': 1.0}, {'prev_utter_greet': 1.0, 'intent_greet': 1.0}, {'intent_mood_unhappy': 1.0, 'prev_action_listen': 1.0}]
+2020-03-16 15:34:37,013 [DEBUG]  There is no memorised next action
+2020-03-16 15:34:37,017 [DEBUG]  Predicted next action using policy_1_KerasPolicy
+2020-03-16 15:34:37,018 [DEBUG]  Predicted next action 'utter_cheer_up' with confidence 0.53.
+2020-03-16 15:34:37,019 [DEBUG]  Action 'utter_cheer_up' ended with events '['BotUttered(text: Here is something to cheer you up:, data: {"elements": null, "quick_replies": null, "buttons": null, "attachment": "https://i.imgur.com/nGF1K8f.jpg", "image": "https://i.imgur.com/nGF1K8f.jpg", "custom": null}, metadata: {})']'
+2020-03-16 15:34:37,646 [DEBUG]  Current tracker state [{'prev_utter_goodbye': 1.0, 'intent_mood_unhappy': 1.0}, {'prev_action_listen': 1.0, 'intent_greet': 1.0}, {'prev_utter_greet': 1.0, 'intent_greet': 1.0}, {'intent_mood_unhappy': 1.0, 'prev_action_listen': 1.0}, {'prev_utter_cheer_up': 1.0, 'intent_mood_unhappy': 1.0}]
+2020-03-16 15:34:37,647 [DEBUG]  There is no memorised next action
+2020-03-16 15:34:37,651 [DEBUG]  There is no mapped action for the predicted intent, 'mood_unhappy'.
+2020-03-16 15:34:37,652 [DEBUG]  Predicted next action using policy_1_KerasPolicy
+2020-03-16 15:34:37,653 [DEBUG]  Predicted next action 'utter_did_that_help' with confidence 0.77.
+2020-03-16 15:34:37,654 [DEBUG]  Action 'utter_did_that_help' ended with events '['BotUttered(text: Did that help you?, data: {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, metadata: {})']'
+2020-03-16 15:34:37,967 [DEBUG]  Current tracker state [{'prev_action_listen': 1.0, 'intent_greet': 1.0}, {'prev_utter_greet': 1.0, 'intent_greet': 1.0}, {'intent_mood_unhappy': 1.0, 'prev_action_listen': 1.0}, {'prev_utter_cheer_up': 1.0, 'intent_mood_unhappy': 1.0}, {'intent_mood_unhappy': 1.0, 'prev_utter_did_that_help': 1.0}]
+2020-03-16 15:34:37,968 [DEBUG]  There is a memorised next action '0'
+2020-03-16 15:34:37,977 [DEBUG]  There is no mapped action for the predicted intent, 'mood_unhappy'.
+2020-03-16 15:34:37,979 [DEBUG]  Predicted next action using policy_0_MemoizationPolicy
+2020-03-16 15:34:37,982 [DEBUG]  Predicted next action 'action_listen' with confidence 1.00.
+2020-03-16 15:34:37,985 [DEBUG]  Action 'action_listen' ended with events '[]'
+2020-03-16 15:34:37,986 [DEBUG]  Deleted lock for conversation 'U010418HBU7'.
+2020-03-16 15:34:51,826 [DEBUG]  Recreating tracker for id 'U010418HBU7'
+2020-03-16 15:34:51,829 [DEBUG]  Received user message 'hi' with intent '{'name': 'greet', 'confidence': 0.9607546329498291}' and entities '[]'
+2020-03-16 15:34:51,830 [DEBUG]  Logged UserUtterance - tracker now has 42 events
+2020-03-16 15:34:51,831 [DEBUG]  Current tracker state [{'prev_utter_greet': 1.0, 'intent_greet': 1.0}, {'intent_mood_unhappy': 1.0, 'prev_action_listen': 1.0}, {'prev_utter_cheer_up': 1.0, 'intent_mood_unhappy': 1.0}, {'intent_mood_unhappy': 1.0, 'prev_utter_did_that_help': 1.0}, {'prev_action_listen': 1.0, 'intent_greet': 1.0}]
+2020-03-16 15:34:51,832 [DEBUG]  There is no memorised next action
+2020-03-16 15:34:51,835 [DEBUG]  Predicted next action using policy_1_KerasPolicy
+2020-03-16 15:34:51,836 [DEBUG]  Predicted next action 'utter_greet' with confidence 0.31.
+2020-03-16 15:34:51,837 [DEBUG]  Action 'utter_greet' ended with events '['BotUttered(text: Hey! How are you?, data: {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, metadata: {})']'
+2020-03-16 15:34:52,155 [DEBUG]  Current tracker state [{'intent_mood_unhappy': 1.0, 'prev_action_listen': 1.0}, {'prev_utter_cheer_up': 1.0, 'intent_mood_unhappy': 1.0}, {'intent_mood_unhappy': 1.0, 'prev_utter_did_that_help': 1.0}, {'prev_action_listen': 1.0, 'intent_greet': 1.0}, {'prev_utter_greet': 1.0, 'intent_greet': 1.0}]
+2020-03-16 15:34:52,156 [DEBUG]  There is no memorised next action
+2020-03-16 15:34:52,161 [DEBUG]  There is no mapped action for the predicted intent, 'greet'.
+2020-03-16 15:34:52,161 [DEBUG]  Predicted next action using policy_1_KerasPolicy
+2020-03-16 15:34:52,162 [DEBUG]  Predicted next action 'action_listen' with confidence 0.97.
+2020-03-16 15:34:52,163 [DEBUG]  Action 'action_listen' ended with events '[]'
+2020-03-16 15:34:52,165 [DEBUG]  Deleted lock for conversation 'U010418HBU7'.
+2020-03-16 15:35:01,439 [DEBUG]  Recreating tracker for id 'U010418HBU7'
+2020-03-16 15:35:01,441 [DEBUG]  Received user message '' with intent '{'name': None, 'confidence': 0.0}' and entities '[]'
+2020-03-16 15:35:01,442 [DEBUG]  Logged UserUtterance - tracker now has 46 events
+2020-03-16 15:35:01,443 [DEBUG]  Current tracker state [{'prev_utter_cheer_up': 1.0, 'intent_mood_unhappy': 1.0}, {'intent_mood_unhappy': 1.0, 'prev_utter_did_that_help': 1.0}, {'prev_action_listen': 1.0, 'intent_greet': 1.0}, {'prev_utter_greet': 1.0, 'intent_greet': 1.0}, {'prev_action_listen': 1.0}]
+2020-03-16 15:35:01,444 [DEBUG]  There is no memorised next action
+2020-03-16 15:35:01,448 [DEBUG]  Predicted next action using policy_1_KerasPolicy
+2020-03-16 15:35:01,449 [DEBUG]  Predicted next action 'utter_cheer_up' with confidence 0.33.
+2020-03-16 15:35:01,450 [DEBUG]  Action 'utter_cheer_up' ended with events '['BotUttered(text: Here is something to cheer you up:, data: {"elements": null, "quick_replies": null, "buttons": null, "attachment": "https://i.imgur.com/nGF1K8f.jpg", "image": "https://i.imgur.com/nGF1K8f.jpg", "custom": null}, metadata: {})']'
+2020-03-16 15:35:02,201 [DEBUG]  Current tracker state [{'intent_mood_unhappy': 1.0, 'prev_utter_did_that_help': 1.0}, {'prev_action_listen': 1.0, 'intent_greet': 1.0}, {'prev_utter_greet': 1.0, 'intent_greet': 1.0}, {'prev_action_listen': 1.0}, {'prev_utter_cheer_up': 1.0}]
+2020-03-16 15:35:02,202 [DEBUG]  There is no memorised next action
+2020-03-16 15:35:02,206 [DEBUG]  There is no mapped action for the predicted intent, 'None'.
+2020-03-16 15:35:02,207 [DEBUG]  Predicted next action using policy_1_KerasPolicy
+2020-03-16 15:35:02,207 [DEBUG]  Predicted next action 'utter_did_that_help' with confidence 0.44.
+2020-03-16 15:35:02,208 [DEBUG]  Action 'utter_did_that_help' ended with events '['BotUttered(text: Did that help you?, data: {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, metadata: {})']'
+2020-03-16 15:35:02,542 [DEBUG]  Current tracker state [{'prev_action_listen': 1.0, 'intent_greet': 1.0}, {'prev_utter_greet': 1.0, 'intent_greet': 1.0}, {'prev_action_listen': 1.0}, {'prev_utter_cheer_up': 1.0}, {'prev_utter_did_that_help': 1.0}]
+2020-03-16 15:35:02,544 [DEBUG]  There is no memorised next action
+2020-03-16 15:35:02,548 [DEBUG]  There is no mapped action for the predicted intent, 'None'.
+2020-03-16 15:35:02,548 [DEBUG]  Predicted next action using policy_1_KerasPolicy
+2020-03-16 15:35:02,549 [DEBUG]  Predicted next action 'action_listen' with confidence 0.46.
+2020-03-16 15:35:02,550 [DEBUG]  Action 'action_listen' ended with events '[]'
+2020-03-16 15:35:02,551 [DEBUG]  Deleted lock for conversation 'U010418HBU7'.
+2020-03-16 15:35:02,556 [DEBUG]  Recreating tracker for id 'U010418HBU7'
+2020-03-16 15:35:02,558 [DEBUG]  Received user message '' with intent '{'name': None, 'confidence': 0.0}' and entities '[]'
+2020-03-16 15:35:02,560 [DEBUG]  Logged UserUtterance - tracker now has 52 events
+2020-03-16 15:35:02,561 [DEBUG]  Current tracker state [{'prev_utter_greet': 1.0, 'intent_greet': 1.0}, {'prev_action_listen': 1.0}, {'prev_utter_cheer_up': 1.0}, {'prev_utter_did_that_help': 1.0}, {'prev_action_listen': 1.0}]
+2020-03-16 15:35:02,562 [DEBUG]  There is no memorised next action
+2020-03-16 15:35:02,566 [DEBUG]  Predicted next action using policy_1_KerasPolicy
+2020-03-16 15:35:02,567 [DEBUG]  Predicted next action 'utter_goodbye' with confidence 0.39.
+2020-03-16 15:35:02,568 [DEBUG]  Action 'utter_goodbye' ended with events '['BotUttered(text: Bye, data: {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, metadata: {})']'
+2020-03-16 15:35:03,004 [DEBUG]  Current tracker state [{'prev_action_listen': 1.0}, {'prev_utter_cheer_up': 1.0}, {'prev_utter_did_that_help': 1.0}, {'prev_action_listen': 1.0}, {'prev_utter_goodbye': 1.0}]
+2020-03-16 15:35:03,005 [DEBUG]  There is no memorised next action
+2020-03-16 15:35:03,009 [DEBUG]  There is no mapped action for the predicted intent, 'None'.
+2020-03-16 15:35:03,010 [DEBUG]  Predicted next action using policy_1_KerasPolicy
+2020-03-16 15:35:03,011 [DEBUG]  Predicted next action 'action_listen' with confidence 0.96.
+2020-03-16 15:35:03,012 [DEBUG]  Action 'action_listen' ended with events '[]'
+2020-03-16 15:35:03,013 [DEBUG]  Deleted lock for conversation 'U010418HBU7'.
+2020-03-16 15:46:25,817 [ERROR]  Exception occurred while handling uri: 'http://c6e938a6.ngrok.io/webhook?code=992103447185.1004218846423.281f6167e7b6938ef8fe37f83e9518b79d707d658371252758922b30b6c7448f&state='
+Traceback (most recent call last):
+  File "c:\users\athen\appdata\local\continuum\anaconda3\lib\site-packages\sanic\app.py", line 940, in handle_request
+    handler, args, kwargs, uri, name = self.router.get(request)
+  File "c:\users\athen\appdata\local\continuum\anaconda3\lib\site-packages\sanic\router.py", line 411, in get
+    return self._get(request.path, request.method, "")
+  File "c:\users\athen\appdata\local\continuum\anaconda3\lib\site-packages\sanic\router.py", line 475, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL /webhook not found
+2020-03-16 15:46:25,817 [ERROR]  Exception occurred in one of response middleware handlers
+Traceback (most recent call last):
+  File "c:\users\athen\appdata\local\continuum\anaconda3\lib\site-packages\sanic\app.py", line 1017, in handle_request
+    request, response, request_name=name
+  File "c:\users\athen\appdata\local\continuum\anaconda3\lib\site-packages\spf\framework.py", line 685, in _run_response_middleware_19_12
+    _response = await _response
+  File "c:\users\athen\appdata\local\continuum\anaconda3\lib\site-packages\sanic_cors\extension.py", line 241, in unapplied_cors_response_middleware
+    request_context = context.request[id(req)]
+  File "c:\users\athen\appdata\local\continuum\anaconda3\lib\site-packages\spf\context.py", line 72, in __getitem__
+    raise e1
+  File "c:\users\athen\appdata\local\continuum\anaconda3\lib\site-packages\spf\context.py", line 58, in __getitem__
+    return self._inner().__getitem__(item)
+KeyError: 1919999960792
+2020-03-16 15:46:26,796 [ERROR]  Exception occurred while handling uri: 'http://c6e938a6.ngrok.io/favicon.ico'
+Traceback (most recent call last):
+  File "c:\users\athen\appdata\local\continuum\anaconda3\lib\site-packages\sanic\app.py", line 940, in handle_request
+    handler, args, kwargs, uri, name = self.router.get(request)
+  File "c:\users\athen\appdata\local\continuum\anaconda3\lib\site-packages\sanic\router.py", line 411, in get
+    return self._get(request.path, request.method, "")
+  File "c:\users\athen\appdata\local\continuum\anaconda3\lib\site-packages\sanic\router.py", line 475, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL /favicon.ico not found
+2020-03-16 15:46:26,797 [ERROR]  Exception occurred in one of response middleware handlers
+Traceback (most recent call last):
+  File "c:\users\athen\appdata\local\continuum\anaconda3\lib\site-packages\sanic\app.py", line 1017, in handle_request
+    request, response, request_name=name
+  File "c:\users\athen\appdata\local\continuum\anaconda3\lib\site-packages\spf\framework.py", line 685, in _run_response_middleware_19_12
+    _response = await _response
+  File "c:\users\athen\appdata\local\continuum\anaconda3\lib\site-packages\sanic_cors\extension.py", line 241, in unapplied_cors_response_middleware
+    request_context = context.request[id(req)]
+  File "c:\users\athen\appdata\local\continuum\anaconda3\lib\site-packages\spf\context.py", line 72, in __getitem__
+    raise e1
+  File "c:\users\athen\appdata\local\continuum\anaconda3\lib\site-packages\spf\context.py", line 58, in __getitem__
+    return self._inner().__getitem__(item)
+KeyError: 1919999960312
+2020-03-16 15:46:33,185 [ERROR]  Exception occurred while handling uri: 'http://c6e938a6.ngrok.io/favicon.ico'
+Traceback (most recent call last):
+  File "c:\users\athen\appdata\local\continuum\anaconda3\lib\site-packages\sanic\app.py", line 940, in handle_request
+    handler, args, kwargs, uri, name = self.router.get(request)
+  File "c:\users\athen\appdata\local\continuum\anaconda3\lib\site-packages\sanic\router.py", line 411, in get
+    return self._get(request.path, request.method, "")
+  File "c:\users\athen\appdata\local\continuum\anaconda3\lib\site-packages\sanic\router.py", line 475, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL /favicon.ico not found
+2020-03-16 15:46:33,186 [ERROR]  Exception occurred in one of response middleware handlers
+Traceback (most recent call last):
+  File "c:\users\athen\appdata\local\continuum\anaconda3\lib\site-packages\sanic\app.py", line 1017, in handle_request
+    request, response, request_name=name
+  File "c:\users\athen\appdata\local\continuum\anaconda3\lib\site-packages\spf\framework.py", line 685, in _run_response_middleware_19_12
+    _response = await _response
+  File "c:\users\athen\appdata\local\continuum\anaconda3\lib\site-packages\sanic_cors\extension.py", line 241, in unapplied_cors_response_middleware
+    request_context = context.request[id(req)]
+  File "c:\users\athen\appdata\local\continuum\anaconda3\lib\site-packages\spf\context.py", line 72, in __getitem__
+    raise e1
+  File "c:\users\athen\appdata\local\continuum\anaconda3\lib\site-packages\spf\context.py", line 58, in __getitem__
+    return self._inner().__getitem__(item)
+KeyError: 1919999960552
+2020-03-16 15:47:05,953 [ERROR]  Exception occurred while handling uri: 'http://c6e938a6.ngrok.io/favicon.ico'
+Traceback (most recent call last):
+  File "c:\users\athen\appdata\local\continuum\anaconda3\lib\site-packages\sanic\app.py", line 940, in handle_request
+    handler, args, kwargs, uri, name = self.router.get(request)
+  File "c:\users\athen\appdata\local\continuum\anaconda3\lib\site-packages\sanic\router.py", line 411, in get
+    return self._get(request.path, request.method, "")
+  File "c:\users\athen\appdata\local\continuum\anaconda3\lib\site-packages\sanic\router.py", line 475, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL /favicon.ico not found
+2020-03-16 15:47:05,954 [ERROR]  Exception occurred in one of response middleware handlers
+Traceback (most recent call last):
+  File "c:\users\athen\appdata\local\continuum\anaconda3\lib\site-packages\sanic\app.py", line 1017, in handle_request
+    request, response, request_name=name
+  File "c:\users\athen\appdata\local\continuum\anaconda3\lib\site-packages\spf\framework.py", line 685, in _run_response_middleware_19_12
+    _response = await _response
+  File "c:\users\athen\appdata\local\continuum\anaconda3\lib\site-packages\sanic_cors\extension.py", line 241, in unapplied_cors_response_middleware
+    request_context = context.request[id(req)]
+  File "c:\users\athen\appdata\local\continuum\anaconda3\lib\site-packages\spf\context.py", line 72, in __getitem__
+    raise e1
+  File "c:\users\athen\appdata\local\continuum\anaconda3\lib\site-packages\spf\context.py", line 58, in __getitem__
+    return self._inner().__getitem__(item)
+KeyError: 1919999960552
+2020-03-16 15:47:14,426 [ERROR]  Exception occurred while handling uri: 'http://c6e938a6.ngrok.io/favicon.ico'
+Traceback (most recent call last):
+  File "c:\users\athen\appdata\local\continuum\anaconda3\lib\site-packages\sanic\app.py", line 940, in handle_request
+    handler, args, kwargs, uri, name = self.router.get(request)
+  File "c:\users\athen\appdata\local\continuum\anaconda3\lib\site-packages\sanic\router.py", line 411, in get
+    return self._get(request.path, request.method, "")
+  File "c:\users\athen\appdata\local\continuum\anaconda3\lib\site-packages\sanic\router.py", line 475, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL /favicon.ico not found
+2020-03-16 15:47:14,426 [ERROR]  Exception occurred in one of response middleware handlers
+Traceback (most recent call last):
+  File "c:\users\athen\appdata\local\continuum\anaconda3\lib\site-packages\sanic\app.py", line 1017, in handle_request
+    request, response, request_name=name
+  File "c:\users\athen\appdata\local\continuum\anaconda3\lib\site-packages\spf\framework.py", line 685, in _run_response_middleware_19_12
+    _response = await _response
+  File "c:\users\athen\appdata\local\continuum\anaconda3\lib\site-packages\sanic_cors\extension.py", line 241, in unapplied_cors_response_middleware
+    request_context = context.request[id(req)]
+  File "c:\users\athen\appdata\local\continuum\anaconda3\lib\site-packages\spf\context.py", line 72, in __getitem__
+    raise e1
+  File "c:\users\athen\appdata\local\continuum\anaconda3\lib\site-packages\spf\context.py", line 58, in __getitem__
+    return self._inner().__getitem__(item)
+KeyError: 1919999961032
+2020-03-16 15:47:25,318 [DEBUG]  Recreating tracker for id 'U010418HBU7'
+2020-03-16 15:47:25,321 [DEBUG]  Received user message 'helllo' with intent '{'name': 'greet', 'confidence': 0.9466729164123535}' and entities '[]'
+2020-03-16 15:47:25,322 [DEBUG]  Logged UserUtterance - tracker now has 56 events
+2020-03-16 15:47:25,323 [DEBUG]  Current tracker state [{'prev_utter_cheer_up': 1.0}, {'prev_utter_did_that_help': 1.0}, {'prev_action_listen': 1.0}, {'prev_utter_goodbye': 1.0}, {'prev_action_listen': 1.0, 'intent_greet': 1.0}]
+2020-03-16 15:47:25,324 [DEBUG]  There is no memorised next action
+2020-03-16 15:47:25,328 [DEBUG]  Predicted next action using policy_1_KerasPolicy
+2020-03-16 15:47:25,329 [DEBUG]  Predicted next action 'utter_greet' with confidence 0.63.
+2020-03-16 15:47:25,329 [DEBUG]  Action 'utter_greet' ended with events '['BotUttered(text: Hey! How are you?, data: {"elements": null, "quick_replies": null, "buttons": null, "attachment": null, "image": null, "custom": null}, metadata: {})']'
+2020-03-16 15:47:25,645 [DEBUG]  Current tracker state [{'prev_utter_did_that_help': 1.0}, {'prev_action_listen': 1.0}, {'prev_utter_goodbye': 1.0}, {'prev_action_listen': 1.0, 'intent_greet': 1.0}, {'prev_utter_greet': 1.0, 'intent_greet': 1.0}]
+2020-03-16 15:47:25,646 [DEBUG]  There is no memorised next action
+2020-03-16 15:47:25,650 [DEBUG]  There is no mapped action for the predicted intent, 'greet'.
+2020-03-16 15:47:25,651 [DEBUG]  Predicted next action using policy_1_KerasPolicy
+2020-03-16 15:47:25,652 [DEBUG]  Predicted next action 'action_listen' with confidence 0.98.
+2020-03-16 15:47:25,653 [DEBUG]  Action 'action_listen' ended with events '[]'
+2020-03-16 15:47:25,656 [DEBUG]  Deleted lock for conversation 'U010418HBU7'.
+2020-03-16 15:48:25,072 [ERROR]  Exception occurred while handling uri: 'http://c6e938a6.ngrok.io/favicon.ico'
+Traceback (most recent call last):
+  File "c:\users\athen\appdata\local\continuum\anaconda3\lib\site-packages\sanic\app.py", line 940, in handle_request
+    handler, args, kwargs, uri, name = self.router.get(request)
+  File "c:\users\athen\appdata\local\continuum\anaconda3\lib\site-packages\sanic\router.py", line 411, in get
+    return self._get(request.path, request.method, "")
+  File "c:\users\athen\appdata\local\continuum\anaconda3\lib\site-packages\sanic\router.py", line 475, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL /favicon.ico not found
+2020-03-16 15:48:25,073 [ERROR]  Exception occurred in one of response middleware handlers
+Traceback (most recent call last):
+  File "c:\users\athen\appdata\local\continuum\anaconda3\lib\site-packages\sanic\app.py", line 1017, in handle_request
+    request, response, request_name=name
+  File "c:\users\athen\appdata\local\continuum\anaconda3\lib\site-packages\spf\framework.py", line 685, in _run_response_middleware_19_12
+    _response = await _response
+  File "c:\users\athen\appdata\local\continuum\anaconda3\lib\site-packages\sanic_cors\extension.py", line 241, in unapplied_cors_response_middleware
+    request_context = context.request[id(req)]
+  File "c:\users\athen\appdata\local\continuum\anaconda3\lib\site-packages\spf\context.py", line 72, in __getitem__
+    raise e1
+  File "c:\users\athen\appdata\local\continuum\anaconda3\lib\site-packages\spf\context.py", line 58, in __getitem__
+    return self._inner().__getitem__(item)
+KeyError: 1919999960792
+2020-03-16 15:48:44,588 [ERROR]  Exception occurred while handling uri: 'http://c6e938a6.ngrok.io/favicon.ico'
+Traceback (most recent call last):
+  File "c:\users\athen\appdata\local\continuum\anaconda3\lib\site-packages\sanic\app.py", line 940, in handle_request
+    handler, args, kwargs, uri, name = self.router.get(request)
+  File "c:\users\athen\appdata\local\continuum\anaconda3\lib\site-packages\sanic\router.py", line 411, in get
+    return self._get(request.path, request.method, "")
+  File "c:\users\athen\appdata\local\continuum\anaconda3\lib\site-packages\sanic\router.py", line 475, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL /favicon.ico not found
+2020-03-16 15:48:44,589 [ERROR]  Exception occurred in one of response middleware handlers
+Traceback (most recent call last):
+  File "c:\users\athen\appdata\local\continuum\anaconda3\lib\site-packages\sanic\app.py", line 1017, in handle_request
+    request, response, request_name=name
+  File "c:\users\athen\appdata\local\continuum\anaconda3\lib\site-packages\spf\framework.py", line 685, in _run_response_middleware_19_12
+    _response = await _response
+  File "c:\users\athen\appdata\local\continuum\anaconda3\lib\site-packages\sanic_cors\extension.py", line 241, in unapplied_cors_response_middleware
+    request_context = context.request[id(req)]
+  File "c:\users\athen\appdata\local\continuum\anaconda3\lib\site-packages\spf\context.py", line 72, in __getitem__
+    raise e1
+  File "c:\users\athen\appdata\local\continuum\anaconda3\lib\site-packages\spf\context.py", line 58, in __getitem__
+    return self._inner().__getitem__(item)
+KeyError: 1919999960792
